@@ -57,8 +57,12 @@ def calc(datain, percent):
     # Set the confidence interval required
     if percent == 90:
         z = z90
-    if percent == 95:
-        z = z95
+    else:
+	if percent == 95:
+        	z = z95
+	else:
+		print "Error: confidence interval not supported"
+		return
         
     # Calculate confidence intervals    
     upper = mean + z * stddev / num**0.5
@@ -82,7 +86,7 @@ Standard deviation: 0.289771528727
 
 >>> calc(list,95)
 Mean = 0.501825068674
-Standard deviation: 0.289771528727
+Standard deviation = 0.289771528727
 95 % confidence interval:
 95 % confidence interval: 0.49584 - 0.50781
 """
