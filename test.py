@@ -31,7 +31,7 @@ def calc(datain, percent):
 	    Prints results to console:
 	        1) Mean
 	        2) Standard deviation
-	        3) Confidence interval of the mean
+	        3) Confidence interval for the mean
     """
 
     # Z score for confidence intervals
@@ -72,7 +72,7 @@ def calc(datain, percent):
     print "Mean =", mean
     print "Standard deviation:", stddev
     # Showing 5 d.p. as z-score not high precision
-    print percent, "% confidence interval:", "%.5f" %lower, "-", "%.5f" %upper
+    print percent, "% confidence interval for the mean:", "%.5f" %lower, "-", "%.5f" %upper
     
     return
 
@@ -82,13 +82,12 @@ def calc(datain, percent):
 >>> calc(list,90)
 Mean = 0.501825068674
 Standard deviation: 0.289771528727
-90 % confidence interval: 0.49680 - 0.50685
+90 % confidence interval for the mean: 0.49680 - 0.50685
 
 >>> calc(list,95)
 Mean = 0.501825068674
 Standard deviation = 0.289771528727
-95 % confidence interval:
-95 % confidence interval: 0.49584 - 0.50781
+95 % confidence interval for the mean: 0.49584 - 0.50781
 """
     
     
